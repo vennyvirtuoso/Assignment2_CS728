@@ -1,0 +1,17 @@
+Starting to train (PyTorch).
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/workspace/CS728/assignment2/trainingRNNs_torch/train.py", line 655, in <module>
+    main()
+  File "/workspace/CS728/assignment2/trainingRNNs_torch/train.py", line 387, in main
+    omega, gW_hh_reg, steps_in_past = omega_regularizer_and_gradW_hh(model, loss, h, args.bound)
+  File "/workspace/CS728/assignment2/trainingRNNs_torch/train.py", line 107, in omega_regularizer_and_gradW_hh
+    dH = torch.autograd.grad(loss, h, create_graph=True, retain_graph=True)[0]
+  File "/usr/local/lib/python3.10/dist-packages/torch/autograd/__init__.py", line 515, in grad
+    result = _engine_run_backward(
+  File "/usr/local/lib/python3.10/dist-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: One of the differentiated Tensors appears to not have been used in the graph. Set allow_unused=True if this is the desired behavior.

@@ -1,0 +1,4 @@
+Starting to train (PyTorch).
+  [diag] log10|dL/dh_t| hist bins=60 range=(-12.50,-11.50) mean=-12.00 p50=-12.00 p05=-12.00 p95=-12.00
+  [diag] sat-dist hist bins=60 sat<0.05=0.0% mean=0.982 p10=0.982 p90=0.983
+Iter 0000020: train nll 1.456, valid error 074.750%, best valid error 100.000%, avg grad norm   0.192, avg grad norm (post clip)   0.052, rho_Whh  0.95, Omega  0.00, alpha  0.000, steps in the past 0.000, valid nll 1.386
