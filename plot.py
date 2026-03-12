@@ -35,6 +35,19 @@ for file_path in glob.glob("*final_state.npz"):
     plt.savefig(f"plots/{base_name}_err.png")
     plt.close()
 
+    if "rho_Whh" in z:
+            rho = z["rho_Whh"]
+            plt.figure()
+            plt.plot(rho, marker='o', markersize=4)
+            plt.axhline(y=1.0, color='r', linestyle='--', label='Stability Threshold (1.0)')
+            plt.title(f"Spectral Radius (rho) - {base_name}")
+            plt.xlabel("Checkpoints")
+            plt.ylabel("rho(Whh)")
+            plt.legend()
+            plt.grid(True, alpha=0.3)
+            plt.savefig(f"plots/{base_name}_rho.png")
+            plt.close()
+
     # 4. GRU Gates (if enabled)
     if "gru" in base_name.lower():
         for gate in ["z", "r"]:
